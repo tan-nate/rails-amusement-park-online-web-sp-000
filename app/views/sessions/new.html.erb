@@ -2,8 +2,8 @@
     <div class="alert"><%= flash[:alert] %></div>
 <% end %>
 
-<%= form_for :user do |f| %>
-    Name: <%= f.collection_select :user_id, User.all, :id, :name %>
+<%= form_with url: '/signin' do |f| %>
+    Name: <%= f.collection_select :user_name, User.all, :name, :name %>
     Password: <%= f.password_field :password %>
     <%= f.submit "Sign In" %>
 <% end %>

@@ -3,10 +3,10 @@ class SessionsController < ApplicationController
     end
     
     def create
-        @user = User.find_by(name: params[:name])
+        @user = User.find_by(name: params[:user_name])
         if @user == nil
             flash[:alert] = "Cannot find user."
-            redirect_to new_session_path
+            redirect_to '/signin'
         else
             return head(:forbidden) unless @user.authenticate(params[:password])
             session[:user_id] = @user.id
