@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'attractions#index'
   resources :users
+  resources :attractions
   get '/signin' => 'sessions#new'
   post '/signin' => 'sessions#create'
   post '/signout' => 'sessions#destroy'

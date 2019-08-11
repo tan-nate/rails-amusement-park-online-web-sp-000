@@ -6,4 +6,5 @@
 <p>Tickets: <%= @user.tickets %></p><br>
 <p>Height: <%= @user.height %></p><br>
 <br>
-<%= link_to "Log Out" '/signout' %>
+<%= link_to "Log Out", '/signout', method: :post %><br>
+<%= link_to "See attractions", attractions_path %>
