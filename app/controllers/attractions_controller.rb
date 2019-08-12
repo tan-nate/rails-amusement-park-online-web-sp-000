@@ -1,6 +1,7 @@
 class AttractionsController < ApplicationController
     def index
         @attractions = Attraction.all
+        @user = User.find(params[:id])
     end
 
     def show
