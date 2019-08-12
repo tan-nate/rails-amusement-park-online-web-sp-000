@@ -319,7 +319,7 @@ describe 'Feature Test: Admin Flow', :type => :feature do
     expect(page).to have_content("#{@ferriswheel.name}")
   end
 
-  it 'allows admins to add an attraction from the index page' do 
+  it 'allows admins to add an attraction from the index page' do
     click_link('See attractions')
     expect(page).to have_content("New Attraction")
   end
