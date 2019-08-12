@@ -21,6 +21,10 @@ class AttractionsController < ApplicationController
       @ride = Ride.new
     end
 
+    def edit
+      @attraction = Attraction.find(params[:id])
+    end
+
     def update
       Attraction.update(attraction_params)
     end
