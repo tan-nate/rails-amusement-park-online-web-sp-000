@@ -1,8 +1,8 @@
 <h2>Attractions</h2>
 <ul>
     <% @attractions.each do |a| %>
-        <li><%= a.name %></li>
+        <li><%= link_to "Go on #{a.name}", attraction_path(a) %></li>
     <% end %>
 </ul>
 
-Sign Up
+<p><%= link_to "Sign Up", '/signup' %></p>

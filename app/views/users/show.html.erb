@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
 <h2><%= @user.name %></h2>
 <% if @user.admin %>
     <h3>ADMIN</h3>
