@@ -3,6 +3,10 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.new
   end
 
+  def create
+    @attraction = Attraction.create(attraction_params)
+  end
+
     def index
         @attractions = Attraction.all
         if session[:user_id]
