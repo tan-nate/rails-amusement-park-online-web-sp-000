@@ -11,4 +11,8 @@
 <p>Height: <%= @user.height %></p><br>
 <br>
 <%= link_to "Log Out", '/signout', method: :post %><br>
-<%= link_to "See attractions", attractions_path %>
+<% if @user.admin %>
+  <%= link_to "See attractions", admin_attractions_path %>
+<% else %>
+  <%= link_to "See attractions", attractions_path %>
+<% end %>
