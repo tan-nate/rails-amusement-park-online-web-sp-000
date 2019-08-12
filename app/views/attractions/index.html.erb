@@ -4,5 +4,7 @@
         <li><%= link_to "Go on #{a.name}", attraction_path(a) %></li>
     <% end %>
 </ul>
+<% if @user.admin %>
+  <%= link_to "New Attraction", new_attraction_path %>
 
 <p><%= link_to "Sign Up", '/signup' %></p>
