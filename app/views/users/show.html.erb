@@ -13,4 +13,6 @@
 <%= link_to "Log Out", '/signout', method: :post %><br>
 <% if @user.admin %>
   <%= link_to "See attractions", admin_attractions_path %>
+<% else %>
+  <%= link_to "See attractions", attractions_path %>
 <% end %>
