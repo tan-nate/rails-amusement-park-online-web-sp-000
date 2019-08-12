@@ -1,4 +1,7 @@
 class AttractionsController < ApplicationController
+  def new
+  end
+
     def index
         @attractions = Attraction.all
         @user = User.find(params[:id])
