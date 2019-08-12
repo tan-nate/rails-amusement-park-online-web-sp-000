@@ -19,4 +19,10 @@ class AttractionsController < ApplicationController
       @user = User.find(session[:user_id])
       @ride = Ride.new
     end
+
+    private
+
+    def attraction_params
+      params.require(:attraction).permit(:name, :min_height, :happiness_rating, :nausea_rating, :tickets)
+    end
 end
