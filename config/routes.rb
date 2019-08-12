@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :rides
 
   namespace :admin do
-    resources :attractions, only: [:index]
+    resources :attractions, only: [:index, :show]
   end
 
   get '/signin' => 'sessions#new'
